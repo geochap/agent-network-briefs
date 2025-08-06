@@ -255,22 +255,26 @@ footer {
 
 /* Brief page specific styles */
 .brief-content {
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .brief-header {
     background: #f8f9fa;
     color: #333;
-    padding: 3rem 0;
+    padding: 2rem 0;
     text-align: center;
     border-bottom: 1px solid #e9ecef;
 }
 
 .brief-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
     color: #2c3e50;
     font-weight: 600;
+    line-height: 1.3;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .brief-meta {
@@ -299,9 +303,9 @@ footer {
 .brief-body {
     max-width: 800px;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 2rem 1rem;
     line-height: 1.8;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .brief-body h1 {
@@ -433,16 +437,21 @@ footer {
     }
     
     .brief-header h1 {
-        font-size: 2rem;
+        font-size: 1.4rem;
+        padding: 0 1rem;
     }
     
     .brief-body {
-        font-size: 1rem;
-        padding: 2rem 1rem;
+        font-size: 0.95rem;
+        padding: 1.5rem 1rem;
     }
     
     .brief-content {
-        padding-top: 120px;
+        padding-top: 100px;
+    }
+    
+    .brief-header {
+        padding: 1.5rem 0;
     }
 }
 
