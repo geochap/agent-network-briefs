@@ -458,7 +458,16 @@ footer {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Account for fixed header */
+    scroll-padding-top: 120px; /* Account for fixed header + extra space */
+}
+
+/* Anchor target offset for fixed header */
+[id]::before {
+    content: '';
+    display: block;
+    height: 100px;
+    margin-top: -100px;
+    visibility: hidden;
 }
 
 /* Loading animation */

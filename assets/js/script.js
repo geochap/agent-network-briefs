@@ -1,47 +1,50 @@
-// Smooth scrolling for navigation links
+// Smooth scrolling for all anchor links
 document.addEventListener('DOMContentLoaded', function() {
-    // Handle navigation clicks
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
     
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+    // Function to handle anchor link clicks
+    function handleAnchorClick(e) {
+        const href = e.currentTarget.getAttribute('href');
+        
+        // Only handle internal anchor links
+        if (href && href.startsWith('#') && href.length > 1) {
             e.preventDefault();
             
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight - 20; // Extra 20px padding
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Handle ALL anchor links on the page (including within content)
-    const allAnchorLinks = document.querySelectorAll('a[href^="#"]');
-    
-    allAnchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = href.substring(1);
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetElement.offsetTop - headerHeight - 20; // Extra 20px padding
+                const header = document.querySelector('header');
+                const headerHeight = header ? header.offsetHeight : 80;
+                const targetPosition = targetElement.offsetTop - headerHeight - 20;
                 
                 window.scrollTo({
-                    top: targetPosition,
+                    top: Math.max(0, targetPosition),
                     behavior: 'smooth'
                 });
             }
+        }
+    }
+    
+    // Add click listeners to all anchor links
+    function addAnchorListeners() {
+        const anchorLinks = document.querySelectorAll('a[href^="#"]');
+        anchorLinks.forEach(link => {
+            link.removeEventListener('click', handleAnchorClick); // Remove existing listener
+            link.addEventListener('click', handleAnchorClick);
         });
+    }
+    
+    // Initial setup
+    addAnchorListeners();
+    
+    // Re-run if content changes (for dynamically loaded content)
+    const mutationObserver = new MutationObserver(function() {
+        addAnchorListeners();
+    });
+    
+    mutationObserver.observe(document.body, {
+        childList: true,
+        subtree: true
     });
     
     // Add scroll effect to header
