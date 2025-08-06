@@ -20,14 +20,15 @@ body {
 
 /* Header and Navigation */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: white;
+    color: #333;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #e9ecef;
 }
 
 nav {
@@ -40,13 +41,18 @@ nav {
 }
 
 nav h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2c3e50;
 }
 
 nav h1 a {
-    color: white;
+    color: #2c3e50;
     text-decoration: none;
+}
+
+nav h1 a:hover {
+    color: #667eea;
 }
 
 nav ul {
@@ -56,14 +62,14 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: #6c757d;
     text-decoration: none;
     font-weight: 500;
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    opacity: 0.8;
+    color: #667eea;
 }
 
 /* Main content */
@@ -77,39 +83,45 @@ main {
 
 /* Hero section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: #f8f9fa;
+    color: #333;
     text-align: center;
-    padding: 6rem 0;
+    padding: 5rem 0;
+    border-bottom: 1px solid #e9ecef;
 }
 
 .hero h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 600;
+    color: #2c3e50;
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    color: #6c757d;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-button {
     display: inline-block;
-    background: rgba(255,255,255,0.2);
+    background: #667eea;
     color: white;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
+    border-radius: 6px;
+    font-weight: 500;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255,255,255,0.3);
+    border: none;
 }
 
 .cta-button:hover {
-    background: rgba(255,255,255,0.3);
-    transform: translateY(-2px);
+    background: #5a6fd8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
 /* About section */
@@ -241,6 +253,158 @@ footer {
     padding: 2rem 0;
 }
 
+/* Brief page specific styles */
+.brief-content {
+    padding-top: 100px;
+}
+
+.brief-header {
+    background: #f8f9fa;
+    color: #333;
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.brief-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.brief-meta {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.brief-meta .author {
+    margin-left: 1rem;
+}
+
+.brief-header .tags {
+    margin-top: 1rem;
+}
+
+.brief-header .tag {
+    background: #e8f0fe;
+    color: #667eea;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin: 0 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.brief-body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.brief-body h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #667eea;
+    font-size: 2rem;
+}
+
+.brief-body h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+.brief-body h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+.brief-body p {
+    margin-bottom: 1.5rem;
+}
+
+.brief-body ul, .brief-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.brief-body li {
+    margin-bottom: 0.5rem;
+}
+
+.brief-body blockquote {
+    border-left: 4px solid #667eea;
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+.brief-body code {
+    background: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #333;
+}
+
+.brief-body pre {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid #e9ecef;
+}
+
+.brief-body pre code {
+    background: none;
+    padding: 0;
+}
+
+.brief-body table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+}
+
+.brief-body th,
+.brief-body td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.brief-body th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.brief-navigation {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+}
+
+.back-to-briefs {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.back-to-briefs:hover {
+    background: #5a6fd8;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     nav {
@@ -266,6 +430,19 @@ footer {
     
     main {
         margin-top: 120px;
+    }
+    
+    .brief-header h1 {
+        font-size: 2rem;
+    }
+    
+    .brief-body {
+        font-size: 1rem;
+        padding: 2rem 1rem;
+    }
+    
+    .brief-content {
+        padding-top: 120px;
     }
 }
 
