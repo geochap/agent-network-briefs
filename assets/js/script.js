@@ -14,9 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Check if we're on a brief page (no fixed header)
                 const isBriefPage = document.body.classList.contains('brief-page');
                 
+                // Update URL first (this allows back button to work)
+                history.pushState(null, null, href);
+                
+                // Then smooth scroll to position
+                e.preventDefault(); // Only prevent after URL update
+                
                 if (isBriefPage) {
                     // On brief pages, just scroll normally with small offset
-                    e.preventDefault();
                     const targetPosition = targetElement.offsetTop - 20;
                     
                     window.scrollTo({
@@ -25,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 } else {
                     // On pages with fixed header, account for header height
-                    e.preventDefault();
                     const header = document.querySelector('header');
                     const headerHeight = header ? header.offsetHeight : 80;
                     const targetPosition = targetElement.offsetTop - headerHeight - 20;
@@ -38,6 +42,33 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+    
+    // Handle browser back/forward navigation
+    window.addEventListener('popstate', function(e) {
+        // If there's a hash in the URL, scroll to it
+        if (window.location.hash) {
+            const targetElement = document.getElementById(window.location.hash.substring(1));
+            if (targetElement) {
+                const isBriefPage = document.body.classList.contains('brief-page');
+                
+                if (isBriefPage) {
+                    const targetPosition = targetElement.offsetTop - 20;
+                    window.scrollTo({
+                        top: Math.max(0, targetPosition),
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const header = document.querySelector('header');
+                    const headerHeight = header ? header.offsetHeight : 80;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                    window.scrollTo({
+                        top: Math.max(0, targetPosition),
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        }
+    });
     
     // Add click listeners to all anchor links
     function addAnchorListeners() {
