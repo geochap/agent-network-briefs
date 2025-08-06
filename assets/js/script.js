@@ -12,7 +12,29 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetSection) {
                 const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight - 20; // Extra 20px padding
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Handle ALL anchor links on the page (including within content)
+    const allAnchorLinks = document.querySelectorAll('a[href^="#"]');
+    
+    allAnchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetElement.offsetTop - headerHeight - 20; // Extra 20px padding
                 
                 window.scrollTo({
                     top: targetPosition,
