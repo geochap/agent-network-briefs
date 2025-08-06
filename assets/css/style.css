@@ -409,6 +409,22 @@ footer {
     background: #5a6fd8;
 }
 
+/* Hide header on brief pages */
+.brief-content ~ header,
+body:has(.brief-content) header {
+    display: none;
+}
+
+/* Alternative approach for better browser support */
+.brief-page header {
+    display: none;
+}
+
+/* Adjust brief content when header is hidden */
+.brief-page .brief-content {
+    padding-top: 0;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     nav {
@@ -458,11 +474,15 @@ footer {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 120px; /* Account for fixed header + extra space */
 }
 
-/* Anchor target offset for fixed header */
-[id]::before {
+/* Only add scroll-padding on non-brief pages */
+body:not(.brief-page) html {
+    scroll-padding-top: 120px;
+}
+
+/* Anchor target offset for fixed header - only on non-brief pages */
+body:not(.brief-page) [id]::before {
     content: '';
     display: block;
     height: 100px;

@@ -7,20 +7,34 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Only handle internal anchor links
         if (href && href.startsWith('#') && href.length > 1) {
-            e.preventDefault();
-            
             const targetId = href.substring(1);
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
-                const header = document.querySelector('header');
-                const headerHeight = header ? header.offsetHeight : 80;
-                const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                // Check if we're on a brief page (no fixed header)
+                const isBriefPage = document.body.classList.contains('brief-page');
                 
-                window.scrollTo({
-                    top: Math.max(0, targetPosition),
-                    behavior: 'smooth'
-                });
+                if (isBriefPage) {
+                    // On brief pages, just scroll normally with small offset
+                    e.preventDefault();
+                    const targetPosition = targetElement.offsetTop - 20;
+                    
+                    window.scrollTo({
+                        top: Math.max(0, targetPosition),
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // On pages with fixed header, account for header height
+                    e.preventDefault();
+                    const header = document.querySelector('header');
+                    const headerHeight = header ? header.offsetHeight : 80;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: Math.max(0, targetPosition),
+                        behavior: 'smooth'
+                    });
+                }
             }
         }
     }
