@@ -1,0 +1,33 @@
+title: Agent Network Briefs
+description: Your source for comprehensive AI agent network analysis and insights
+url: "https://[your-username].github.io/agent-network-briefs"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections
+collections:
+  briefs:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "briefs"
+    values:
+      layout: "brief"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

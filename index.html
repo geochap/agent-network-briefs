@@ -1,0 +1,68 @@
+---
+layout: default
+---
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Welcome to {{ site.title }}</h2>
+                <p>{{ site.description }}</p>
+                <a href="#briefs" class="cta-button">Explore Briefs</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About</h2>
+                <p>Agent Network Briefs provides in-depth analysis and research on AI agent networks, their behavior patterns, and emerging trends in artificial intelligence systems.</p>
+            </div>
+        </section>
+
+        <section id="briefs" class="section">
+            <div class="container">
+                <h2>Latest Briefs</h2>
+                <div class="brief-grid">
+                    {% assign sorted_briefs = site.briefs | sort: 'date' | reverse %}
+                    {% for brief in sorted_briefs limit: 6 %}
+                    <article class="brief-card">
+                        <h3><a href="{{ brief.url | relative_url }}">{{ brief.title }}</a></h3>
+                        <p>{{ brief.excerpt | strip_html | truncate: 150 }}</p>
+                        <div class="brief-meta">
+                            <span class="date">{{ brief.date | date: "%B %d, %Y" }}</span>
+                            {% if brief.tags %}
+                            <div class="tags">
+                                {% for tag in brief.tags limit: 3 %}
+                                <span class="tag">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </article>
+                    {% endfor %}
+                    
+                    {% if site.briefs.size == 0 %}
+                    <article class="brief-card">
+                        <h3>Multi-Agent Communication Patterns</h3>
+                        <p>Analysis of communication protocols between AI agents in distributed systems.</p>
+                        <span class="date">Coming Soon</span>
+                    </article>
+                    <article class="brief-card">
+                        <h3>Network Topology Optimization</h3>
+                        <p>Research on optimal network structures for agent collaboration and efficiency.</p>
+                        <span class="date">Coming Soon</span>
+                    </article>
+                    <article class="brief-card">
+                        <h3>Emergent Behaviors in Agent Networks</h3>
+                        <p>Study of unexpected behaviors that emerge from agent interactions.</p>
+                        <span class="date">Coming Soon</span>
+                    </article>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>For inquiries about agent network research and collaboration opportunities.</p>
+                <p>More information coming soon.</p>
+            </div>
+        </section>
