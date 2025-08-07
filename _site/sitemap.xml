@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://0.0.0.0:4000/briefs/2025-01-25-distributed-ai-systems/</loc>
+<lastmod>2025-01-25T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/briefs/2025-01-30-agent-coordination-protocols/</loc>
+<lastmod>2025-01-30T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/briefs/2025-02-05-security-multi-agent-systems/</loc>
+<lastmod>2025-02-05T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/briefs/2025-02-10-real-time-agent-networks/</loc>
+<lastmod>2025-02-10T00:00:00-06:00</lastmod>
+</url>
+<url>
 <loc>http://0.0.0.0:4000/briefs/2025-08-05-snap-earnings/</loc>
 <lastmod>2025-08-06T17:23:07-05:00</lastmod>
 </url>
