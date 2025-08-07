@@ -1,18 +1,10 @@
 ---
 layout: default
 ---
-        <section id="home" class="hero">
+        <section id="intro" class="intro-section">
             <div class="container">
-                <h2>Welcome to {{ site.title }}</h2>
-                <p>{{ site.description }}</p>
-                <a href="#briefs" class="cta-button">Explore Briefs</a>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About</h2>
-                <p>Agent Network Briefs provides in-depth analysis and research on AI agent networks, their behavior patterns, and emerging trends in artificial intelligence systems.</p>
+                <h1>Agent Network Briefs</h1>
+                <p>In-depth analysis and research on AI agent networks, their behavior patterns, and emerging trends in artificial intelligence systems.</p>
             </div>
         </section>
 
@@ -37,32 +29,6 @@ layout: default
                         </div>
                     </article>
                     {% endfor %}
-                    
-                    {% if site.briefs.size == 0 %}
-                    <article class="brief-card">
-                        <h3>Multi-Agent Communication Patterns</h3>
-                        <p>Analysis of communication protocols between AI agents in distributed systems.</p>
-                        <span class="date">Coming Soon</span>
-                    </article>
-                    <article class="brief-card">
-                        <h3>Network Topology Optimization</h3>
-                        <p>Research on optimal network structures for agent collaboration and efficiency.</p>
-                        <span class="date">Coming Soon</span>
-                    </article>
-                    <article class="brief-card">
-                        <h3>Emergent Behaviors in Agent Networks</h3>
-                        <p>Study of unexpected behaviors that emerge from agent interactions.</p>
-                        <span class="date">Coming Soon</span>
-                    </article>
-                    {% endif %}
                 </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>For inquiries about agent network research and collaboration opportunities.</p>
-                <p>More information coming soon.</p>
             </div>
         </section>
