@@ -10,11 +10,17 @@ layout: default
 
         <section id="briefs" class="section">
             <div class="container">
-                <h2>Latest Briefs</h2>
-                <div class="brief-grid">
+                <div class="brief-grid" id="brief-grid">
                     {% assign sorted_briefs = site.briefs | sort: 'date' | reverse %}
-                    {% for brief in sorted_briefs limit: 6 %}
-                    <article class="brief-card">
+                    {% assign briefs_per_page = 5 %}
+                    {% assign total_briefs = sorted_briefs.size %}
+                    {% assign total_pages = total_briefs | divided_by: briefs_per_page %}
+                    {% if total_briefs modulo briefs_per_page > 0 %}
+                        {% assign total_pages = total_pages | plus: 1 %}
+                    {% endif %}
+                    
+                    {% for brief in sorted_briefs limit: briefs_per_page %}
+                    <article class="brief-card" data-page="1">
                         <h3><a href="{{ brief.url | relative_url }}">{{ brief.title }}</a></h3>
                         <p>{{ brief.excerpt | strip_html | truncate: 150 }}</p>
                         <div class="brief-meta">
@@ -29,6 +35,88 @@ layout: default
                         </div>
                     </article>
                     {% endfor %}
+                    
+                    <!-- Hidden briefs for other pages -->
+                    {% assign current_page = 2 %}
+                    {% assign offset = briefs_per_page %}
+                    {% for i in (2..total_pages) %}
+                        {% assign page_briefs = sorted_briefs | offset: offset | limit: briefs_per_page %}
+                        {% for brief in page_briefs %}
+                        <article class="brief-card" data-page="{{ current_page }}" style="display: none;">
+                            <h3><a href="{{ brief.url | relative_url }}">{{ brief.title }}</a></h3>
+                            <p>{{ brief.excerpt | strip_html | truncate: 150 }}</p>
+                            <div class="brief-meta">
+                                <span class="date">{{ brief.date | date: "%B %d, %Y" }}</span>
+                                {% if brief.tags %}
+                                <div class="tags">
+                                    {% for tag in brief.tags limit: 3 %}
+                                    <span class="tag">{{ tag }}</span>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </article>
+                        {% endfor %}
+                        {% assign current_page = current_page | plus: 1 %}
+                        {% assign offset = offset | plus: briefs_per_page %}
+                    {% endfor %}
                 </div>
+                
+                {% if total_pages > 1 %}
+                <div class="pagination" id="pagination">
+                    <button class="pagination-btn" id="prev-btn" onclick="changePage('prev')" disabled>← Previous</button>
+                    <div class="pagination-numbers" id="pagination-numbers">
+                        {% for i in (1..total_pages) %}
+                        <button class="page-number {% if i == 1 %}active{% endif %}" onclick="goToPage({{ i }})">{{ i }}</button>
+                        {% endfor %}
+                    </div>
+                    <button class="pagination-btn" id="next-btn" onclick="changePage('next')" {% if total_pages == 1 %}disabled{% endif %}>Next →</button>
+                </div>
+                {% endif %}
             </div>
         </section>
+
+        <script>
+        let currentPage = 1;
+        const totalPages = {{ total_pages }};
+        
+        function showPage(page) {
+            // Hide all briefs
+            document.querySelectorAll('.brief-card').forEach(card => {
+                card.style.display = 'none';
+            });
+            
+            // Show briefs for current page
+            document.querySelectorAll(`[data-page="${page}"]`).forEach(card => {
+                card.style.display = 'block';
+            });
+            
+            // Update pagination buttons
+            updatePaginationButtons();
+        }
+        
+        function updatePaginationButtons() {
+            // Update page numbers
+            document.querySelectorAll('.page-number').forEach((btn, index) => {
+                btn.classList.toggle('active', index + 1 === currentPage);
+            });
+            
+            // Update prev/next buttons
+            document.getElementById('prev-btn').disabled = currentPage === 1;
+            document.getElementById('next-btn').disabled = currentPage === totalPages;
+        }
+        
+        function goToPage(page) {
+            currentPage = page;
+            showPage(page);
+        }
+        
+        function changePage(direction) {
+            if (direction === 'prev' && currentPage > 1) {
+                currentPage--;
+            } else if (direction === 'next' && currentPage < totalPages) {
+                currentPage++;
+            }
+            showPage(currentPage);
+        }
+        </script>
