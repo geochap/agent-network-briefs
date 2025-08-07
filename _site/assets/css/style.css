@@ -425,13 +425,23 @@ body:has(.brief-content) header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin: 3rem auto 0 auto;
     gap: 1rem;
     width: 100%;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0 20px;
+    clear: both;
     grid-column: 1 / -1; /* Span all grid columns if inside a grid container */
+}
+
+/* Debug pagination positioning */
+.pagination {
+    border: 2px solid red !important; /* Temporary debug border */
+    background: yellow !important; /* Temporary debug background */
+}
+
+.pagination-numbers {
+    border: 1px solid blue !important; /* Temporary debug border */
 }
 
 .pagination-btn {
