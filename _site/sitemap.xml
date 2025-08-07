@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://0.0.0.0:4000/briefs/2025-07-30-meta-earnings/</loc>
+<lastmod>2025-07-30T17:16:50-05:00</lastmod>
+</url>
+<url>
 <loc>http://0.0.0.0:4000/briefs/2025-08-05-palantir-earnings/</loc>
 <lastmod>2025-08-04T15:58:18-05:00</lastmod>
 </url>
@@ -11,10 +15,6 @@
 <url>
 <loc>http://0.0.0.0:4000/briefs/2025-08-06-amd-earnings/</loc>
 <lastmod>2025-08-05T15:13:06-05:00</lastmod>
-</url>
-<url>
-<loc>http://0.0.0.0:4000/briefs/2025-07-30-meta-earnings/</loc>
-<lastmod>2025-08-07T17:16:50-05:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/</loc>
