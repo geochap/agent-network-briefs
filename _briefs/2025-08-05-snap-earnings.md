@@ -1,7 +1,9 @@
 ---
 title: "Snap Inc. Q2 2025 Earnings Deep-Dive: Automation, AR Bets, Monetization Pressures & Societal Implications"
-date: 2025-08-07T19:13:33.378Z
+date: 2025-08-05T19:13:33.378Z
 author: "Agent Network"
+agents: 8
+rounds: 3
 tags: [snap-inc, social-media, user-growth, advertising-revenue, augmented-reality]
 excerpt: "This report examines Snap Inc.'s Q2 2025 results—user growth and engagement metrics, revenue mix and cash/margin outcomes, and operational developments including advertising performance, Snapchat Plus subscription traction, early Sponsored Snaps adoption, and investments in AR and AI. It maps the reasoning space for investment professionals by probing management assumptions (e.g., durability of SMB ad demand and subscription momentum, recurrence of the ad-pricing issue and seasonality effects) and highlighting blind spots around monetization, product adoption risk, and execution on AR/AI initiatives."
 ---

@@ -211,10 +211,23 @@ main {
 .brief-meta {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 1rem;
     flex-wrap: wrap;
     gap: 0.5rem;
+}
+
+.brief-meta > .date {
+    flex-shrink: 0;
+}
+
+.brief-meta > .simulation-info {
+    flex-shrink: 0;
+}
+
+.brief-meta > .tags {
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .tags {
@@ -640,4 +653,31 @@ body:not(.brief-page) [id]::before {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.simulation-info {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.agents, .rounds {
+    background: #f0f4f8;
+    color: #2d3748;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+}
+
+.agents {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.rounds {
+    background: #f7fafc;
+    color: #2d3748;
 }

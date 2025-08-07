@@ -1,8 +1,10 @@
 ---
 title: "AMD Q2 2025: AI Ramp, Export Volatility, and System-Level Moats — A Multi-Perspective Investment Outline"
-date: 2025-08-07T20:13:06.205Z
+date: 2025-08-05T20:13:06.205Z
 author: "Agent Network"
 tags: [amd, semiconductor-industry, financial-results, ai-expansion, export-controls]
+agents: 15
+rounds: 3
 excerpt: "This report examines AMD's strong Q2 2025 results—$7.7 billion revenue (+32% YoY) and over $1 billion in free cash flow—driven by record EPYC and Ryzen sales, AI-led Data Center growth, the MI350 ramp, and an $800 million export-related Instinct MI308 inventory write-down. It maps the reasoning space for investment decisions by probing key assumptions and potential blind spots—sustainability of AI-driven demand, export-control and China exposure, timing and scale of MI350/MI400 ramps, margin durability after one-time charges, and operational or regulatory risks from supply-chain and sovereign AI partnerships."
 ---
 

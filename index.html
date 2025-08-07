@@ -20,7 +20,7 @@ layout: default
 
         
       {% assign sorted_briefs = site.briefs | sort: "date" | reverse %}
-      {% assign briefs_per_page = 3 %}
+      {% assign briefs_per_page = 10 %}
       {% assign total_briefs  = sorted_briefs | size %}
       {% assign total_pages   = total_briefs | divided_by: briefs_per_page %}
       {% assign pages_times_per_page = total_pages | times: briefs_per_page %}
@@ -49,6 +49,16 @@ layout: default
 
           <div class="brief-meta">
             <span class="date">{{ brief.date | date: "%B %d, %Y" }}</span>
+            {% if brief.agents or brief.rounds %}
+              <div class="simulation-info">
+                {% if brief.agents %}
+                  <span class="agents">{{ brief.agents }} agents</span>
+                {% endif %}
+                {% if brief.rounds %}
+                  <span class="rounds">{{ brief.rounds }} rounds</span>
+                {% endif %}
+              </div>
+            {% endif %}
             {% if brief.tags %}
               <div class="tags">
                 {% for tag in brief.tags limit: 3 %}
