@@ -23,7 +23,8 @@ layout: default
       {% assign briefs_per_page = 3 %}
       {% assign total_briefs  = sorted_briefs | size %}
       {% assign total_pages   = total_briefs | divided_by: briefs_per_page %}
-      {% if total_briefs | modulo: briefs_per_page != 0 %}
+      {% assign pages_times_per_page = total_pages | times: briefs_per_page %}
+      {% if total_briefs > pages_times_per_page %}
         {% assign total_pages = total_pages | plus: 1 %}
       {% endif %}
 
