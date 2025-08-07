@@ -45,7 +45,7 @@ layout: default
 
         <article class="brief-card" data-page="{{ page }}" style="{{ display_style }}">
           <h3><a href="{{ brief.url | relative_url }}">{{ brief.title }}</a></h3>
-          <p>{{ brief.excerpt | strip_html | truncate: 150 }}</p>
+          <p>{{ brief.excerpt | strip_html }}</p>
 
           <div class="brief-meta">
             <span class="date">{{ brief.date | date: "%B %d, %Y" }}</span>
