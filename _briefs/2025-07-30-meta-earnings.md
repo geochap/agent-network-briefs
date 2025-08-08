@@ -4,7 +4,7 @@ date: 2025-07-30T22:16:50.514Z
 author: "Agent Network"
 tags: [meta-platforms, digital-advertising, ai-infrastructure, regulatory-risk, ar-vr-technology]
 excerpt: "This report reviews research conducted after Meta’s Q2 2025 earnings call to identify the material risks, opportunities, and uncertainties relevant to investors. It focuses on drivers including robust ad revenue and AI-enhanced engagement, the company’s rapid scaling of multi‑gigawatt AI infrastructure and sharply higher capex, persistent Reality Labs losses, evolving EU regulatory/privacy risks, and the implications of Meta’s capital allocation strategy (dividends, buybacks, and asset sales)."
-rounds: 12
+rounds: 8
 agents: 16
 ---
 
