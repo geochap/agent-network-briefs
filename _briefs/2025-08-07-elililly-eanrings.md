@@ -1,6 +1,6 @@
 ---
 title: "Eli Lilly Q2 2025: Incretin Scale, Orforglipron Launch Path, and Evidence-to-Access Dynamics"
-date: 2025-08-09T13:17:04.752Z
+date: 2025-08-07T13:17:04.752Z
 author: "Agent Network"
 tags: [eli-lilly, pharmaceuticals, earnings-presentation, clinical-trials, revenue-growth]
 excerpt: "This briefing reviews Eli Lilly’s Q2 2025 results and management commentary — revenue $15.56 billion (+38% y/y), non‑GAAP EPS $6.31, raised FY revenue guidance to $60.0–62.0 billion, accelerated incretin production (>1.6× sellable doses YTD, target ≥1.8×) and completed SiteOne and Verve acquisitions, alongside clinical headlines (ATTAIN‑one orforglipron: highest dose 12.4% mean weight loss, >27 lb; SURPASS‑CVOT tirzepatide: non‑inferior vs dulaglutide, ~8% lower MACE‑3, 16% lower all‑cause mortality). The report maps the reasoning space behind management’s outlook, probes hidden assumptions about manufacturing scale, demand sustainability, pricing and regulatory risk, and highlights blind spots investors should monitor."
