@@ -2,6 +2,8 @@
 title: "Expert Networks 2025–2027: Compliance, Provenance, and Economic Realignment in the Agent-First Era"
 date: 2025-08-12T11:03:33.575Z
 author: "Agent Network"
+agents: 19
+rounds: 3
 tags: [expert-networks, generative-ai, regulatory-compliance, market-analysis, vendor-competition]
 excerpt: "This report examines how generative AI, changing integration standards, and tightening regulation are reshaping the global expert‑network industry and vendor positioning over the next 12–24 months. Using multi‑persona validation, scenario analysis, and quantified tripwires, it translates risks and opportunities into prioritized 30–60–90‑day actions for executives, procurement, and compliance teams."
 ---
@@ -98,7 +100,7 @@ Two offsetting forces could determine net spend: elasticity that expands total c
 — Head of Standards, MCP Consortium; Support: —
 
 > Agent-first/MCP enables a “content-as-a-service” SKU: bundle an enterprise floor (e.g., $150k/yr for 100M retrieval tokens) plus usage overages and offer 15–30% partner rev-share on Copilot/ChatGPT/Aiera connectors. Meter by source-cited chunk retrieval, enforce TTL caching, and ship per-user audit logs to meet EU AI Act auditability. Target 25–40% attach in Tier-1 funds within 12 months, with <10% seat cannibalization via hybrid UI+API packaging. | Falsifier: Attach <15% and cannibalization >20% in 2Q {Conf: Med} [[55]](#post-55)  
-— Head of API Partnerships, AlphaSense–Tegus; Support: —
+— Head of API Partnerships, Expert Network Vendor; Support: —
 
 > Agent-first/MCP shift unlocks usage-based API monetization for content owners; a simple sensitivity ($0.08/query × 80 queries/day × 60k users × 250 days) implies ~$96m incremental ARR per top provider within 12–18 months, with 60–70% gross margin, rerating EV/sales 1–2 turns. | Falsifier: Top 20 clients avoid MCP/API through 2026 {Conf: Med} [[66]](#post-66)  
 — Senior Investment Strategist, Buy-Side; Support: —
@@ -311,7 +313,7 @@ Six distinct clusters emerged, anchored around compliance/provenance, monetizati
 
 - MCP‑native distribution with per‑document entitlements, branded citations, and usage‑metered APIs can convert agent queries into attributable demand while preserving pricing power; signed entitlements/revocation hooks are the technical lever [[49]](#post-49) [[65]](#post-65).
 - Revenue thesis: “content‑as‑a‑service” floors plus overages and partner rev‑share drive material ARR (sensitivity ≈$96m within 12–18 months) if attach lands; hybrid UI+API packaging targets 25–40% attach with limited seat cannibalization [[55]](#post-55) [[66]](#post-66). Incumbent provenance+distribution moats can travel into agents via Bloomberg/Aiera‑style integrations [[52]](#post-52).
-- Key voices: Head of API Partnerships (AlphaSense–Tegus) – packaging/rev‑share; Head of Standards (MCP Consortium) – entitlements/standardization; Senior Investment Strategist – ARR sensitivity; CTO (Expert Network Vendor) – integration pragmatics; Incumbent Vendor Analyst – incumbent distribution strength.
+- Key voices: Head of API Partnerships (Expert Network Vendor) – packaging/rev‑share; Head of Standards (MCP Consortium) – entitlements/standardization; Senior Investment Strategist – ARR sensitivity; CTO (Expert Network Vendor) – integration pragmatics; Incumbent Vendor Analyst – incumbent distribution strength.
 
 ### **Cluster 3: Buyer Pragmatists and Quant Skeptics**
 
@@ -666,7 +668,7 @@ Experimental / Watch-list
 → [View related research](#post-79)
 
 <a id="post-55"></a>
-[55] **Head of API Partnerships, AlphaSense-Tegus** [Strength] Agent-first/MCP enables a “content-as-a-service” SKU: bundle an enterprise floor (e.g., $150k/yr for 100M retrieval tokens) plus usage overages and offer 15–30% partner rev-share on Copilot/ChatGPT/Aiera connectors. Meter by source-cited chunk retrieval, enforce TTL caching, and ship per-user audit logs to meet EU AI Act auditability. Target 25–40% attach in Tier-1 funds within 12 months, with <10% seat cannibalization via hybrid UI+API packaging. | Falsifier: Attach <15% and cannibalization >20% in 2Q {Conf: Med}
+[55] **Head of API Partnerships, Expert Network Vendor** [Strength] Agent-first/MCP enables a “content-as-a-service” SKU: bundle an enterprise floor (e.g., $150k/yr for 100M retrieval tokens) plus usage overages and offer 15–30% partner rev-share on Copilot/ChatGPT/Aiera connectors. Meter by source-cited chunk retrieval, enforce TTL caching, and ship per-user audit logs to meet EU AI Act auditability. Target 25–40% attach in Tier-1 funds within 12 months, with <10% seat cannibalization via hybrid UI+API packaging. | Falsifier: Attach <15% and cannibalization >20% in 2Q {Conf: Med}
 
 → [View related research](#post-78)
 
@@ -784,7 +786,7 @@ Experimental / Watch-list
 → [View related research](#post-103)
 
 <a id="post-88"></a>
-[88] **Head of API Partnerships, AlphaSense-Tegus** Have GLG, Third Bridge, Tegus, AlphaSense, or Aiera published MCP connectors or agent SDK documentation; and do any implement C2PA-signed citations or immutable audit logs in agent responses? Provide links or press references. _(🔄 18)_
+[88] **Head of API Partnerships, Expert Network Vendor** Have GLG, Third Bridge, Tegus, AlphaSense, or Aiera published MCP connectors or agent SDK documentation; and do any implement C2PA-signed citations or immutable audit logs in agent responses? Provide links or press references. _(🔄 18)_
 
 <a id="post-89"></a>
 [89] **ESG Research Program Manager** Have GLG, Third Bridge, Guidepoint, AlphaSense/Tegus publicly disclosed 2024–25 ESG reports with Scope 1–3 emissions, renewable energy share, data center energy/water, and AI feature energy/CO2 intensity, plus any third‑party assurance? Include links if available. _(🔄 17)_
