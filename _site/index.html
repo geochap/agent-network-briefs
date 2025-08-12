@@ -45,6 +45,39 @@
       
 
         <article class="brief-card" data-page="1" style="">
+          <h3><a href="/briefs/2025-08-12-circle-earnings/">Circle Q2-25 Earnings Call: Multi-Perspective Analysis & Strategic Outlook</a></h3>
+          <p>This report examines Circle Internet Group’s first public earnings call (Aug 12, 2025), summarizing key financials—Q2 revenue plus reserve income of $658m, adjusted EBITDA $126m, and USDC circulation reported near $61–65bn—alongside recent strategic moves including its June IPO and product launches (Circle Payments Network, Circle Gateway, and Arc). It maps the reasoning investment professionals should use when assessing Circle by probing management assumptions, regulatory implications (notably the GENIUS Act), and potential blind spots in growth, product adoption, and token economics.</p>
+
+          <div class="brief-meta">
+            <span class="date">August 12, 2025</span>
+            
+              <div class="simulation-info">
+                
+                  <span class="agents">8 agents</span>
+                
+                
+                  <span class="rounds">undefined rounds</span>
+                
+              </div>
+            
+            
+              <div class="tags">
+                
+                  <span class="tag">circle-internet-group</span>
+                
+                  <span class="tag">fintech</span>
+                
+                  <span class="tag">earnings-report</span>
+                
+              </div>
+            
+          </div>
+        </article>
+
+        
+      
+
+        <article class="brief-card" data-page="1" style="">
           <h3><a href="/briefs/2025-08-11-expert-networks/">Expert Networks 2025–2027: Compliance, Provenance, and Economic Realignment in the Agent-First Era</a></h3>
           <p>This report examines how generative AI, changing integration standards, and tightening regulation are reshaping the global expert‑network industry and vendor positioning over the next 12–24 months. Using multi‑persona validation, scenario analysis, and quantified tripwires, it translates risks and opportunities into prioritized 30–60–90‑day actions for executives, procurement, and compliance teams.</p>
 
@@ -341,7 +374,7 @@
         
       
 
-        <article class="brief-card" data-page="1" style="">
+        <article class="brief-card" data-page="2" style="display:none;">
           <h3><a href="/briefs/2025-07-30-meta-earnings/">Meta Platforms Q2 2025: AI Infrastructure Leadership vs. Regulatory, Sustainability, and Monetization Risks</a></h3>
           <p>This report reviews research conducted after Meta’s Q2 2025 earnings call to identify the material risks, opportunities, and uncertainties relevant to investors. It focuses on drivers including robust ad revenue and AI-enhanced engagement, the company’s rapid scaling of multi‑gigawatt AI infrastructure and sharply higher capex, persistent Reality Labs losses, evolving EU regulatory/privacy risks, and the implications of Meta’s capital allocation strategy (dividends, buybacks, and asset sales).</p>
 
@@ -376,12 +409,31 @@
     </div>
 
     
+      <div class="pagination" id="pagination">
+        <button class="pagination-btn" id="prev-btn" onclick="changePage('prev')" disabled>← Previous</button>
+
+        <div class="pagination-numbers" id="pagination-numbers">
+          
+            <button class="page-number active"
+                    onclick="goToPage(1)">1</button>
+          
+            <button class="page-number "
+                    onclick="goToPage(2)">2</button>
+          
+        </div>
+
+        <button class="pagination-btn" id="next-btn"
+                onclick="changePage('next')" >
+          Next →
+        </button>
+      </div>
+    
   </div>
 </section>
 
 <script>
   let currentPage = 1;
-  const totalPages = 1;
+  const totalPages = 2;
 
   function showPage (page) {
     currentPage = page;
