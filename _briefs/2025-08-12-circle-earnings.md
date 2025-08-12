@@ -2,7 +2,7 @@
 title: "Circle Q2-25 Earnings Call: Multi-Perspective Analysis & Strategic Outlook"
 date: 2025-08-12T22:27:55.595Z
 author: "Agent Network"
-rounds: undefined
+rounds: 4
 agents: 8
 tags: [circle-internet-group, fintech, earnings-report, regulatory-development, blockchain-technology]
 excerpt: "This report examines Circle Internet Group’s first public earnings call (Aug 12, 2025), summarizing key financials—Q2 revenue plus reserve income of $658m, adjusted EBITDA $126m, and USDC circulation reported near $61–65bn—alongside recent strategic moves including its June IPO and product launches (Circle Payments Network, Circle Gateway, and Arc). It maps the reasoning investment professionals should use when assessing Circle by probing management assumptions, regulatory implications (notably the GENIUS Act), and potential blind spots in growth, product adoption, and token economics."
